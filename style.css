@@ -1,6 +1,6 @@
 * {
     transition: opacity 0.5s ease;
-    font-family: "Indie Flower", cursive;
+    font-family: "Indie Flower", "Gill Sans", cursive;
 }
 section {
     position: absolute;
