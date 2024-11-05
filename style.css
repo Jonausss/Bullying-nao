@@ -1,0 +1,116 @@
+* {
+    transition: opacity 0.5s ease;
+    font-family: "Indie Flower", cursive;
+}
+section {
+    position: absolute;
+    width: 99vw;
+    height: 100vh;
+}
+.active {
+    opacity: 1; /* Torna a seção visível */
+    z-index: 1; /* Garante que ela fique no topo */
+} 
+.disabled {
+    opacity: 0; /* Invisível */
+    z-index: 0;
+    pointer-events: none; /* Evita interações enquanto está oculta */
+}
+button {
+    background-color: #fff;
+    border: 1px solid #d5d9d9;
+    border-radius: 8px;
+    box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+    box-sizing: border-box;
+    color: #0f1111;
+    display: inline-block;
+    font-size: 1.4em;
+    line-height: 29px;
+    padding: 0.3em 1em 0.3em 1em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    width: 9em;
+}
+button:hover {
+    background-color: #f7fafa;
+}
+
+/*=====START SECTION=====*/
+.start img {
+    height: 5em;
+    float: right;
+    padding: 1em 1em 0 0;
+}
+.start h1 {
+    font-size: 5em;
+}
+
+.start .title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*=====TUTORIAL SECTION=====*/
+.tutorial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7em;
+}
+.tutorial p {
+    font-size: 1.3em;
+}
+.tutorial button {
+    background-color: #00000000;
+    border: 0;
+    box-shadow: none;
+    width: 3em;
+    padding: 0;
+}
+.tutorial i {
+    color: #0f1111;
+    font-size: 100px;
+}
+.tutorial i:hover {
+    color: #323838;
+}
+
+/*=====PHASE SECTION=====*/
+.phase {
+    padding: 1em 7em;
+}
+.phase p {
+    padding-top: 1.5em;
+    font-size: 1.5em;
+}
+.phase .buttons-container {
+    display: flex;
+    flex-direction: column;
+}
+.buttons-container button {
+    margin-bottom: 0.3em;
+    width: 100%;
+    font-size: 1em;
+    text-align: left;
+}
+.buttons-container .selected {
+    background-color: #787b7b;
+}
+.phase .option {
+    background-color: #00000000;
+    border: 0;
+    box-shadow: none;
+    width: 1em;
+}
