@@ -6,6 +6,9 @@
     <title>Projeto Bullying</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,17 +20,17 @@
         <img src="images/Logo.png" alt="">
         <div class="title active">
             <h1>BULLYING NÃO</h1>
-            <button onclick="ChangeScreen('tutorialSection')">começar jogo</button>
+            <button id="startButtonId" onclick="ChangeScreen('tutorialSection'), ActiveBackgroundGradient(true)">começar jogo</button>
         </div>
     </section>
 
     <section class="tutorial disabled" id="tutorialSection">
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis, temporibus deserunt accusamus voluptates numquam illum quasi velit quis at aspernatur praesentium perferendis ducimus atque. Eaque laudantium veritatis, nobis quasi vero cum magni libero magnam amet quia ab officiis nam quam corrupti pariatur odio placeat error at ad cumque? Dolorem vitae modi a alias dolores ipsum sapiente voluptatum quasi ut iusto. Soluta, ducimus in quia fuga optio repudiandae iure dolorum, impedit hic molestias explicabo nostrum perferendis earum eos ipsam. Alias fugit nostrum, quisquam exercitationem corporis unde autem doloremque laudantium quam esse iure adipisci delectus error enim, maxime eum qui odit, velit assumenda natus culpa at hic. Reprehenderit ut facilis laboriosam dicta animi vitae, voluptatum eveniet quibusdam sunt expedita quis nemo architecto praesentium recusandae quisquam placeat, doloremque veritatis numquam. Cumque, architecto ut tenetur eos saepe ab. Nulla ad explicabo dolorum magnam esse culpa ratione consequatur eius quae minus! Commodi veniam ab enim similique, nobis amet corrupti excepturi earum rerum distinctio qui, expedita ipsam. Iusto, nemo possimus! Fugit, rerum optio! Placeat repellat error architecto repellendus, labore necessitatibus nemo, rerum aspernatur sunt quod modi accusamus magni dolor nisi consequuntur qui dignissimos inventore. Aut quod nisi consectetur ab minima pariatur repellendus quia incidunt commodi modi.</p>
-        <button href="" onclick="ChangeScreen('1PhaseSection')"><i class="fa-solid fa-arrow-right-long"></i></button>
+        <button href="" onclick="ChangeScreen('phaseSection')"><i class="fa-solid fa-arrow-right-long"></i></button>
     </section>
 
-    <section class="phase disabled" id="1PhaseSection">
-        <h2 id="questionNumberId"> - [1/8] -</h2>
+    <section class="phase disabled" id="phaseSection">
+        <h2 id="questionNumberId"> - [1/3] -</h2>
         <p class="question" id="questionId">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id itaque nisi consectetur cupiditate, minima et magnam molestias accusamus temporibus, dolorum vel, asperiores eveniet eos quo. Voluptas expedita aperiam officia, sint at laudantium porro deserunt inventore eos in obcaecati laborum voluptates!</p>
         <div class="buttons-container">
             <button class="answer-btn" id="0" onclick="AnswerQuestion(0)">Resposta 1</button>
@@ -42,7 +45,12 @@
         </div>
     </section>
 
-    <script src="scripts/changeScreen.js"></script>
+    <section class="final disabled" id="finalSection">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis, temporibus deserunt accusamus voluptates numquam illum quasi velit quis at aspernatur praesentium perferendis ducimus atque. Eaque laudantium veritatis, nobis quasi vero cum magni libero magnam amet quia ab officiis nam quam corrupti pariatur odio placeat error at ad cumque? Dolorem vitae modi a alias dolores ipsum sapiente voluptatum quasi ut iusto. Soluta, ducimus in quia fuga optio repudiandae iure dolorum, impedit hic molestias explicabo nostrum perferendis earum eos ipsam. Alias fugit nostrum, quisquam exercitationem corporis unde autem doloremque laudantium quam esse iure adipisci delectus error enim, maxime eum qui odit, velit assumenda natus culpa at hic. Reprehenderit ut facilis laboriosam dicta animi vitae, voluptatum eveniet quibusdam sunt expedita quis nemo architecto praesentium recusandae quisquam placeat, doloremque veritatis numquam. Cumque, architecto ut tenetur eos saepe ab. Nulla ad explicabo dolorum magnam esse culpa ratione consequatur eius quae minus! Commodi veniam ab enim similique, nobis amet corrupti excepturi earum rerum distinctio qui, expedita ipsam. Iusto, nemo possimus! Fugit, rerum optio! Placeat repellat error architecto repellendus, labore necessitatibus nemo, rerum aspernatur sunt quod modi accusamus magni dolor nisi consequuntur qui dignissimos inventore. Aut quod nisi consectetur ab minima pariatur repellendus quia incidunt commodi modi.</p>
+        <button onclick="ChangeScreen('startSection'), ActiveBackgroundGradient(false)">reiniciar jogo</button>
+    </section>
+
+    <script src="scripts/visuals.js"></script>
     <script src="scripts/gameManager.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>

@@ -1,11 +1,15 @@
 * {
     transition: opacity 0.5s ease;
-    font-family: "Indie Flower", "Gill Sans", cursive;
+    font-family: "Comic Sans MS", cursive;
 }
+/*@media screen and (min-width: 1366px) {
+    * {font-family: "Verdana", sans-serif;}
+}*/
 section {
     position: absolute;
     width: 99vw;
     height: 100vh;
+    animation: 2s ease-out;
 }
 .active {
     opacity: 1; /* Torna a seção visível */
@@ -85,11 +89,15 @@ button:hover {
 }
 .tutorial i:hover {
     color: #323838;
+    transform: scale(1.2);
 }
 
 /*=====PHASE SECTION=====*/
 .phase {
     padding: 1em 7em;
+}
+.phase h2{
+    text-align: center;
 }
 .phase p {
     padding-top: 1.5em;
@@ -108,9 +116,28 @@ button:hover {
 .buttons-container .selected {
     background-color: #787b7b;
 }
+.phase .options {
+    display: flex;
+    justify-content : center;
+}
 .phase .option {
     background-color: #00000000;
     border: 0;
     box-shadow: none;
     width: 1em;
 }
+.phase .option:hover {
+    transform: scale(1.2);
+}
+
+/*=====FINAL SECTION=====*/
+.final {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7em;
+}
+.final p {
+    font-size: 1.3em;
+}   
